@@ -27,7 +27,7 @@ naipe = {
     'H':1
 }
 deck = []
-start = input('Deseja jogar? S/N').upper().replace(' ', '')
+start = input('Deseja jogar? S/N ').upper().replace(' ', '')
 
 while start != 'N':
     #Constrói o deck e embaralha
@@ -48,7 +48,7 @@ while start != 'N':
     #Rodada de fato
     jj = 0
     while total < 22:
-        jj = input('Hit(h) ou Stand(s)?')
+        jj = input('Hit(h) ou Stand(s)? ')
         if jj == 'h':
             hand += [deck.pop()]
             total = calculo(hand, num)
@@ -60,11 +60,11 @@ while start != 'N':
             break
     if total <= 21:
         totaldealer = calculo(dealerhand, num)
-        print(f"Mão do dealer: {dealerhand}", f"\n Total: {totaldealer}")
+        print(f"\nMão do dealer: {dealerhand}", f"\n Total: {totaldealer}")
         while totaldealer < 17:
             dealerhand += [deck.pop()]
             totaldealer = calculo(dealerhand, num)
-            print(f"Mão do dealer: {dealerhand}", f"\n Total: {totaldealer}")
+            print(f"Dealer comprou: {dealerhand[-1]}", f"\n Total: {totaldealer}")
         if totaldealer > 21:
             print('Dealer estourou! Player vence.')
         elif totaldealer > total:
@@ -73,5 +73,5 @@ while start != 'N':
             print('Player ganhou do dealer!')
         else:
             print('Empatados!')
-    start = input('\n\nDeseja jogar novamente? S/N').upper().replace(' ', '')
+    start = input('\n\nDeseja jogar novamente? S/N ').upper().replace(' ', '')
 print('Encerrando o jogo...')
