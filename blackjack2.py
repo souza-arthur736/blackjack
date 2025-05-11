@@ -3,7 +3,7 @@ def calculo(hand):
     aces = 0 
     handvalues = []
     for x in hand:
-        value = x.split(' of ')[0]
+        value = x[0]
         try:
             int_value = int(value)
         except ValueError:
@@ -19,7 +19,7 @@ def calculo(hand):
         aces -= 1
     return total
 num = ['K', 'Q', 'J', '9', '8', '7', '6', '5', '4','3','2','A']
-naipe = [' of Spades', ' of Hearts', ' of Diamonds', ' of Clubs']
+naipe = ['♠', '♥', '♦', '♣']
 deck = []
 valuedeck = []
 
