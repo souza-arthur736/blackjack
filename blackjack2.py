@@ -18,19 +18,8 @@ def calculo(hand):
         total -= 10
         aces -= 1
     return total
-num = {
-    'A':1,
-    'K':10,
-    'Q':10,
-    'J':10,
-    '9 ':9, '8 ':8, '7 ':7, '6 ':6, '5 ':5, '4 ':4, '3 ':3, '2 ':2
-}
-naipe = {
-    ' of Spades':1,
-    ' of Clubs':1,
-    ' of Diamonds':1,
-    ' of Hearts':1
-}
+num = ['K', 'Q', 'J', '9', '8', '7', '6', '5', '4','3','2','A']
+naipe = [' of Spades', ' of Hearts', ' of Diamonds', ' of Clubs']
 deck = []
 valuedeck = []
 
